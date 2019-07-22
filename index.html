@@ -9,19 +9,25 @@
 
 	<!-- Link css -->
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="container">
 		<header>
-			<div class="panel">
-				<h1>Matching Game</h1>
-				<div class="info">
-					Time: <span class="timer">00:00</span>
+			<h2>Matching Game</h2>
+			<hr>
+			<div class="matching-panel">
+				<div class="matching-info">
+					Time: <span id="time-remaining">120</span>
 				</div>
-				<div class="info">
+				<div class="matching-info">
 					Flips: <span id="flips">0</span>
 				</div>
-				<button onclick="resetBoard()" type="reset">Reset</button>
+				<div class="matching-info">
+					<button onclick="restartGame()" type="reset" style="font-size: 30px;">
+						<i class="fa fa-repeat"></i>
+					</button>
+				</div>
 			</div>
 		</header><!-- End. header -->
 		<section class="matching-game">
