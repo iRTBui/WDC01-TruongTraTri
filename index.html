@@ -1,75 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" type="text/css" href="style/css/task3.css">
-		<link rel="stylesheet" type="text/css" href="style/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<script src="https//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-     	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>Matching game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Matching Game</title>
+
+	<!-- Link css -->
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-3">
-				<i class="fab fa-html5"></i>
+		<header>
+			<div class="panel">
+				<h1>Matching Game</h1>
 			</div>
-			<div class="col-3">
-				<i class="fab fa-css3"></i>
+		</header><!-- End. header -->
+		<section class="matching-game">
+			<div class="matching-card" data-match="html5">
+			  <img class="flip-card-front" src="img/html5.svg" alt="HTML5" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
 			</div>
-			<div class="col-3">
-				<i class="fab fa-js"></i>
+			<div class="matching-card" data-match="html5">
+			  <img class="flip-card-front" src="img/html5.svg" alt="HTML5" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
 			</div>
-			<div class="col-3">
-				<i class="fab fa-bootstrap"></i>
-			</div>
-			<div class="w-100"></div>
-			<div class="col-3">
-				<i class="fab fa-html5"></i>
-			</div>
-			<div class="col-3">
-				<i class="fab fa-css3"></i>
-			</div>
-			<div class="col-3">
-				<i class="fab fa-js"></i>
-			</div>
-			<div class="col-3">
-				<i class="fab fa-bootstrap"></i>
-			</div>
-			<div class="w-100"></div>
-			<div class="col-3">
-				<i class="fab fa-html5"></i>
-			</div>
-			<div class="col-3">
-				<i class="fab fa-css3"></i>
-			</div>
-			<div class="col-3">
-				<i class="fab fa-js"></i>
-			</div>
-			<div class="col-3">
-				<i class="fab fa-bootstrap"></i>
-			</div>
-			<div class="w-100"></div>
-			<div class="col-3">
-				<i class="fab fa-html5"></i>
-			</div>
-			<div class="col-3">
-				<i class="fab fa-css3"></i>
-			</div>
-			<div class="col-3">
-				<i class="fab fa-js"></i>
-			</div>
-			<div class="col-3">
-				<i class="fab fa-bootstrap"></i>
-			</div>
-		</div>
-	</div>
 
+			<div class="matching-card" data-match="css3">
+			  <img class="flip-card-front" src="img/css3.svg" alt="CSS3" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+			 <div class="matching-card" data-match="css3">
+			  <img class="flip-card-front" src="img/css3.svg" alt="CSS3" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+
+			<div class="matching-card" data-match="bootstrap">
+			  <img class="flip-card-front" src="img/bootstrap.svg" alt="Bootstrap" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+			<div class="matching-card" data-match="bootstrap">
+			  <img class="flip-card-front" src="img/bootstrap.svg" alt="Bootstrap" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+
+			<div class="matching-card" data-match="angular">
+			  <img class="flip-card-front" src="img/angular.svg" alt="Angular" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+			<div class="matching-card" data-match="angular">
+			  <img class="flip-card-front" src="img/angular.svg" alt="Angular" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+
+			<div class="matching-card" data-match="vue">
+			  <img class="flip-card-front" src="img/vue.svg" alt="Vue" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+			<div class="matching-card" data-match="vue">
+			  <img class="flip-card-front" src="img/vue.svg" alt="Vue" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+
+			<div class="matching-card" data-match="react">
+			  <img class="flip-card-front" src="img/react.svg" alt="React" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+			<div class="matching-card" data-match="react">
+			  <img class="flip-card-front" src="img/react.svg" alt="React" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+
+			<div class="matching-card" data-match="npm">
+			  <img class="flip-card-front" src="img/npm.svg" alt="NPM" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+			<div class="matching-card" data-match="npm">
+			  <img class="flip-card-front" src="img/npm.svg" alt="NPM" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+
+			<div class="matching-card" data-match="Gulp">
+			  <img class="flip-card-front" src="img/gulp.svg" alt="Gulp" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+			<div class="matching-card" data-match="Gulp">
+			  <img class="flip-card-front" src="img/gulp.svg" alt="Gulp" />
+			  <img class="flip-card-back" src="img/question.svg" alt="Question" />
+			</div>
+		</section><!-- End. section -->
+	</div><!-- End. container -->
+	<!-- Link javascripts -->
+	<script src="js/scripts.js"></script>
 </body>
 </html>
