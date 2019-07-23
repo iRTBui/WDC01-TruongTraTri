@@ -7,7 +7,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 // tạo 2 card
 let firstCard, secondCard;
-//
+// tổng số lần đã click
 let totalClick = 0;
 
 //hàm lật card
@@ -78,3 +78,48 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+//đồng hồ đếm ngược
+var m = 1; // Phút
+var s = 30; // Giây
+var m_text;
+var s_text;             
+var timeout = null; // Timeout
+             
+function oclock()
+{
+  s--;
+  if(s == -1)
+  {
+    m = m - 1;
+    s = 59;
+  }
+  if(m == -1)
+  {
+    alert("Time out!");
+
+  }
+  if(m < 10)
+  {
+    m_text = "0" + m.toString();
+  }
+  else{
+    m_text = m_text.toString();
+  }
+  if(s < 10)
+  {
+    s_text = "0" + s.toString();
+  }else{
+    s_text = s.toString();
+  }
+  document.getElementById("001").innerHTML = m_text + ":" + s_text;
+}
+
+//gọi hàm trong oclock trong mỗi giây
+
+setInterval(oclock,1000); //1000ms
+
+function stop(){
+   clearTimeout(timeout);
+} 
+
