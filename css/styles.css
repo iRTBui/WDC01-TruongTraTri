@@ -30,9 +30,30 @@ header {
   text-align: center;
 }
 
-.panel {
+h2 {
+  font-size: 4em;
+}
+
+hr {
+  margin: auto;
+  width: 50%;
+}
+
+.matching-panel {
+  display: flex;
+}
+
+.matching-info {
+  font-size: 2em;
   width: 100%;
-  text-align: center;
+}
+
+.timer,
+.flips {
+  /* padding-left: 5px; */
+  font-size: 1.5em;
+  /* width: 50%; */
+  /* text-align: center;  */
 }
 
 /* Style of the main */
