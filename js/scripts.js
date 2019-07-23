@@ -7,10 +7,11 @@ let hasFlippedCard = false;
 let lockBoard = false;
 // tạo 2 card
 let firstCard, secondCard;
-//
+// tổng số click lật thẻ
 let totalClick = 0;
-//
-let totalTime = 120;
+//checkWinGame
+let checkWinGame = 8;
+
 //hàm lật card
 function flipCard() {
   if(lockBoard) return;
@@ -27,9 +28,6 @@ function flipCard() {
     hasFlippedCard = true;
     firstCard = this;
 
-    // console.log(this.totalTime);
-    setCountDown();
-
     return;
   }
 
@@ -39,10 +37,11 @@ function flipCard() {
   //tăng số lượt lật
   totalClick++;
   this.ticker.innerText = totalClick;
-  console.log(this.ticker);
+  // console.log(this.ticker);
   //kiểm tra match
   checkForMatch();
 
+  winGame();
 }
 
 // hàm kiếm tra card đã match
@@ -56,6 +55,7 @@ function disableCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
 
+  checkWinGame--;
   resetBoard();
 }
 
@@ -71,10 +71,10 @@ function unFlipCard() {
   }, 500);
 }
 
-// hàm reset nếu không trùng với firtCard
+// hàm reset nếu không trùng với firstCard
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
-  [firstCard, secondCard] = [null, null]
+  [firstCard, secondCard] = [null, null];
 }
 
 // ngẫu nhiên cho các card
@@ -84,7 +84,6 @@ function resetBoard() {
     card.style.order = randomPos;
   });
 })();
-
 
 // setCountDown
 function setCountDown() {
@@ -96,9 +95,15 @@ function setCountDown() {
       //   alert("Game Over");
   }, 1000);
 }
+
+// hàm winGame
+function winGame() {
+  if (checkWinGame === 0) alert("You WIN");
+}
+
 // hàm restart
 function restartGame() {
-  console.log('qq');
+  window.location.reload();
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
